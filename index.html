@@ -96,6 +96,23 @@ img {
 }
 
 @media screen and (max-width: 1000px) {
+   .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px; /* Adjust based on navbar height */
+                left: 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
   .column-66,
   .column-33 {
     width: 100%;
