@@ -96,15 +96,14 @@ img {
 
 @media screen and (max-width: 1000px) {
    .navbar {
+         align-items: flex-start;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
   }
-
   .nav-links {
     flex-direction: column;
     width: 100%;
-    padding-top: 8px;
+    margin-top: 16px; /* Add some space between the logo and links */
+    gap: 8px; /* Reduce spacing between stacked links */
   }
   .column-66,
   .column-33 {
