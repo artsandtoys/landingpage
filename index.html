@@ -23,6 +23,42 @@ body {
   clear: both
 }
 
+.navbar {
+  background-color: #222;
+  color: white;
+  padding: 1rem 2rem; /* Adjust horizontal padding here */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* optional: limits container width */
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+
 .column-66 {
   float: left;
   width: 75%;
@@ -59,6 +95,15 @@ img {
 }
 
 @media screen and (max-width: 1000px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    width: 200px;
+    display: none; /* Hidden by default, needs toggle for full functionality */
+  }
   .column-66,
   .column-33 {
     width: 100%;
