@@ -37,7 +37,7 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 100%; /* optional: limits container width */
-  /*margin: 0 auto;*/
+  margin: 0 auto; /* Centers the navbar container on larger screens */
 }
 
 .logo {
@@ -99,22 +99,33 @@ img {
 }
 
 @media screen and (max-width: 1000px) {
-   .nav-links {
-      align-items: center;
-      text-align: center;
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      position: absolute;
-        justify-content: center;
-        top: 30px; /* Adjust based on navbar height */
-        left: 0px;
+   .navbar-container {
+    flex-direction: column; /* Stack logo and nav links */
+    align-items: center; /* Center items horizontally */
   }
-    .nav-links.active {
-      display: none; 
+
+  .logo {
+    width: 100%; /* Make logo take full width */
+    text-align: center; /* Center the logo text */
+    margin-bottom: 15px; /* Add some space below the logo */
   }
-    .nav-links li {
-      margin: 15px 0;
+
+  .nav-links {
+    align-items: center;
+    text-align: center;
+    display: none; /* Initially hide the links */
+    flex-direction: column;
+    width: 100%;
+    position: static; /* Remove absolute positioning */
+    justify-content: center;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active class is applied (you'll need JavaScript for this toggle) */
+  }
+
+  .nav-links li {
+    margin: 15px 0;
   }
   .column-66,
   .column-33 {
