@@ -31,8 +31,9 @@ body {
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* space-between */
   align-items: center;
+  position: static;
   max-width: 100%; /* optional: limits container width */
   margin: 0 auto;
 }
@@ -96,9 +97,10 @@ img {
 
 @media screen and (max-width: 1000px) {
   .nav-links {
-    align-items: center;
+      align-items: center;
     flex-direction: column;
-    padding: 20px;
+        text-align: center;
+        padding: 20px;
   }
   .column-66,
   .column-33 {
